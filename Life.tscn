@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Halloween Game Jam/health.png" type="Texture" id=1]
+[ext_resource path="res://Life.gd" type="Script" id=2]
+[ext_resource path="res://Halloween Game Jam/health loss.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "loss",
+"speed": 5.0
+} ]
+
+[node name="Life" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 9, 9 )
+frames = SubResource( 1 )
+animation = "loss"
+
+[node name="Sprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 27, 9 )
+frames = SubResource( 1 )
+animation = "loss"
+
+[node name="Sprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 45, 9 )
+scale = Vector2( 1.0625, 1 )
+frames = SubResource( 1 )
+animation = "loss"
